@@ -25,6 +25,9 @@
                 <li><a href="#skills">Technical Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+
+                <button id="theme-toggle" onclick="changeTheme()">☀️ Light Mode</button>
+
             </ul>
         </nav>
     </header>
@@ -288,6 +291,19 @@
 
     <script>
         document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+         function changeTheme() {
+            let body = document.getElementById("changeBackground");
+            let btn = document.getElementById("theme-toggle");
+
+            body.classList.toggle("light-theme");
+
+            if(body.classList.contains("light-theme")) {
+                btn.innerHTML = "🌙 Dark Mode";
+            } else {
+                btn.innerHTML = "☀️ Light Mode";
+            }
+        }
     </script>
 </body>
 
